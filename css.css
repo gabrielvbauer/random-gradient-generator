@@ -1,0 +1,120 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: calc(100% - 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    width: 100%;
+    max-width: 80px;
+    padding: 8px 0;
+    margin: 0 5px;
+    background-color: rgb(101, 218, 249);
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    transition: .4s;
+    box-shadow: 0 0 5px #2d2d2d;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid #65daf9;
+}
+
+button:active {
+    transform: scale(1.05);
+    background-color: rgba(101, 218, 249, .2);
+}
+
+.advice-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% + 50px));
+    text-align: center;
+}
+
+.advice-wrapper i {
+    font-size: 25px;
+    color: rgba(10, 10, 10, .4);
+    cursor: pointer;
+}
+
+.info {
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    background-color: rgba(10, 10, 10, .95);
+    border: 3px solid #65daf9;
+    color: white;
+    border-radius: 8px;
+    line-height: 25px;
+    transition: .8s;
+    display: none;
+}
+
+.advice-wrapper input {
+    border: 2px solid #65daf9;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    outline: none;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.timer {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 2px 5px;
+    font-size: 17px;
+    background-color: rgba(10, 10, 10, .3);
+    color: white;
+}
+
+.easterEgg {
+    text-align: center;
+    padding: 0 10px;
+    box-shadow: 0 0 10px rgba(10, 10, 10, .5);
+    text-shadow: 2px 2px 10px black;
+    border-radius: 10px;
+    background: rgba(10, 10, 10, .4);
+    color: white;
+}
+
+.easterEgg h2 {
+    font-size: 57px;
+}
+
+.easterEgg p {
+    font-size: 19px;
+}
+
+.easterEgg .timer-easter {
+    font-size: 50px;
+}
