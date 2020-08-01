@@ -26,7 +26,7 @@ let foundUs = false;
 document.body.style.background = localStorage.getItem('gradient')
 res.innerHTML = localStorage.getItem('gradient')
 const random = ((255 - 0 + 1) + 0)
-let timeIntervalCustomValue = 0
+let timeIntervalCustomValue = 1000
 let timerFormated
 let consoleIndex = 0
 
