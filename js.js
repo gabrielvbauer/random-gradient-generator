@@ -20,14 +20,15 @@ changeTimeIntervalButton.addEventListener("click", changeBGAutoTime)
 let isRunning = false;
 let changeOnce = false;
 let isShowing = false;
-let foundUs = false
+let foundUs = false;
 
 //Default
 document.body.style.background = localStorage.getItem('gradient')
 res.innerHTML = localStorage.getItem('gradient')
 const random = ((255 - 0 + 1) + 0)
-let timeIntervalCustomValue = 1
+let timeIntervalCustomValue = 0
 let timerFormated
+let consoleIndex = 0
 
 //Core function, generates random orientation and two rgb values, save them in localStorage a assign it to the body css
 function changeBG() {
@@ -42,13 +43,14 @@ function changeBG() {
         let GG = generateRandomRGB()
         let BB = generateRandomRGB()
 
-        console.log(R, G, B, RR, GG, BB)
-
         let gradientVal = `linear-gradient(${orientation}deg, rgb(${R},${G},${B}), rgb(${RR}, ${GG}, ${BB}))`
         localStorage.setItem('gradient', gradientVal)
 
         document.body.style.background = gradientVal
         res.innerHTML = gradientVal
+
+        consoleIndex += 1
+        console.log(consoleIndex + " : " + R, G, B, RR, GG, BB)
 
         if (R == G && R == B && R == RR && R == GG & R == BB) {
             isRunning = false
@@ -121,6 +123,8 @@ function timerCount() {
             if (seconds > 59) {
                 seconds = 0
                 minutes += 1
+                consoleIndex = 0
+                console.clear()
                 if (minutes > 59) {
                     minutes = 0
                     hours += 1
