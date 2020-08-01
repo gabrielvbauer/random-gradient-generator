@@ -143,7 +143,7 @@ function easterEgg() {
             <h2>Congrats. You found us</h2>
             <p>This photo only appears if all the values from the gradient are exactly equal, except from the orientation value.<br>Please take a screenshot of the page and send to me on my discord: <strong>tizuyu#3800</strong>
             </p>
-            <p>Believe me, the odds for a thing like this happening are lower than an activated End Portal spawning in Minecraft.</p>
+            <p>Believe me, the odds for a thing like this happening are 1 in 359,895,314,625 billion, wich is something around 0.00000000027785858%.</p>
             <div class="timer-easter" id="timer-easter">${timerFormated}</div>
         </div>
         <script src="js.js"></script>

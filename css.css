@@ -36,14 +36,14 @@ button:active {
     background-color: rgba(101, 218, 249, .2);
 }
 
-.advice-wrapper {
+.config-wrapper {
     position: absolute;
     top: 50%;
     transform: translateY(calc(-50% + 50px));
     text-align: center;
 }
 
-.advice-wrapper i {
+.config-wrapper i {
     font-size: 25px;
     color: rgba(10, 10, 10, .4);
     cursor: pointer;
@@ -62,7 +62,7 @@ button:active {
     display: none;
 }
 
-.advice-wrapper input {
+.config-wrapper input {
     border: 2px solid #65daf9;
     border-radius: 5px;
     background-color: transparent;
@@ -85,6 +85,27 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+.hint {
+    width: 100%;
+    max-width: 255px;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 40px), calc(-50% - 60px));
+    text-align: center;
+    background-color: rgba(10, 10, 10, .3);
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+
+.auto-mode:hover~.hint {
+    visibility: visible;
+    opacity: 1;
 }
 
 .timer {
